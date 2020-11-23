@@ -1,0 +1,41 @@
+We’re going to dive right in, leveraging the most recently read paper.  
+Let’s skip the stuff from section 2, and take the 2 languages of section 3, namely the one from section 3.1 p.20 (Exp) and section 3.4 p. 29 (Symantics).
+
+Pair with fst and snd. Fst should have signature:
+fst :: repr (a, b) -> repr a
+pair :: repr a -> repr b -> repr (a, b)
+Want to have the repr tags to have everything uniformally represented.
+
+Symantic implementation, code did not have type checking so don't expect type checking
+ 
+
+Please do the following:
+1.- add a Bool type to Symantics [typeclass]
+2.- add an Int type to Exp [GADT]
+3.- add ‘and’, ‘or’ and ‘not’ to both languages
+4.- add ‘*’, and unary ‘-‘ to both
+5.- add <= and < to both
+6.- add if-then-else to both; make sure it is fully polymorphic in the ‘then’ and ‘else’ branches
+7.- add pair, fst and snd, fully polymorphic
+8.- for both, you should have an evaluator and a pretty-printer
+
+ 
+(yes, I’m aware that the answers are mostly in the paper already. Trust me, you’ll not quite get it right anyways!). Doing both styles is important to really see the contrast.
+
+
+Meant for EQ to be polymorphic but polymorphic equality is hard. So don't add polymorphic = to both
+
+Bonus things to do (you can do any, including all, of these):
+- add polymorphic = to both
+- you’ll have a lot of redundant code in the above. Find ways to make your code prettier, by factoring out the commonalities
+- implement sum types, i.e. Either, with constructors left, right and eliminator ‘either’.
+- implement a ‘length’ interpretation
+- implement a nicer pretty printer using https://hackage.haskell.org/package/prettyprinter (see documentation at https://hackage.haskell.org/package/prettyprinter-1.1.1/docs/Data-Text-Prettyprint-Doc.html)
+
+ 
+
+Due Oct. 30th (though I’ll accept things until Nov. 1 at no penalty).
+
+ 
+
+The non-bonus things are not difficult. They will, however, likely take you some time to accomplish, largely because of unfamiliarity. As you can see from the paper, the total amount of code to write will be quite modest. The bonus things are all bonus because they each require a different bit of ingenuity to get it done. None are difficult, though none are entirely straightforward. Again, code size is small – but small code is not always easy.
