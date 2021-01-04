@@ -1,0 +1,7 @@
+Many of you gave me decent solutions.  For the ‘initial’ code, what I most missed were type annotations and proper error messages.  Generally, the tagless version was done quite well.  Kudos to those who had test cases and sent them in. And also to the one person who use cabal to package things up (I didn’t go that far myself...)
+
+
+My solution is “over the top” in many ways, where I factor out lots of common things into sub-functions. The resulting code is, however, a lot clearer.
+
+ 
+To make my life easier, I borrowed code from your own solutions (as well as some code from a solution of 4 years ago).  

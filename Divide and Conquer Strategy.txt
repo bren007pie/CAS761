@@ -1,0 +1,40 @@
+Divide and Conquer Haskell exercises
+
+This gives me the most amount of anxiety but if I just do 20 minutes at a time, up to an hour, it will get done.
+Breaking it down into things that will take me an hour (or more). First starting with what needs to be broken up.
+
+Goal: To understand the TTF paper and learn how to do some honest to goodness metaprogramming. 
+
+-try writing digital Haskell notes so it goes faster
+
+Broken down sections
+- Understand his TTF code (tried even running it for example programs given and ran into an error)
+	- Understand TTF concepts
+		- Going though 1 section at a time to read/do the Typed Tagless Final Interpreters paper by Oleg Kiselyov
+			- 
+	- Understand Haskell Concepts
+		Keywords to learn/refresh 1 hr each:
+			class
+			newtype
+			instance
+			data
+			records/record syntax (making record syntax for stuff (like class paramaters), don't have to specify in order)
+				Can make all EPTA objects using record syntax
+			modules
+			maybe
+
+
+Unbroken down sections:
+- Understand his TTF code (tried even running it for example programs given and ran into an error)
+	- Understand Haskell Concepts
+		Keywords to learn/refresh:
+			class
+			newtype
+			instance
+			data
+			records/record syntax
+			modules
+	
+- Understand what exercises 2 is trying to do
+	- Understand MP concepts
+- Doing each of the 5 exercises

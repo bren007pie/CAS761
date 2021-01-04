@@ -1,0 +1,66 @@
+First: start from my model solution.  Drop the initial stuff, just focus on “finally tagless”.
+
+ 
+
+To do:
+1. - implement sum types , i.e. Either, with constructors left, right and eliminator ‘either’.
+2. - implement a ‘length’ interpretation
+3. - implement a nicer pretty printer using https://hackage.haskell.org/package/prettyprinter (see documentation at https://hackage.haskell.org/package/prettyprinter-1.1.1/docs/Data-Text-Prettyprint-Doc.html)
+
+4. - implement a ‘tracing’ interpretation (i.e. one that will collect a String that should all evaluations).  Use the following:
+
+type Level = Int
+
+type VarCounter = Int
+
+newtype T a = T { unT :: Level -> VarCounter -> String }
+
+ 
+
+indent :: Int -> String -> String
+
+indent k s = let n = k * 2 in ((replicate n ' ') ++ "->" ++ s ++ "\n")
+
+ 
+
+5. - implement a Template Haskell version.
+
+newtype C a = C ExpQ
+
+unC (C x) = x
+
+ 
+
+-- the following is a helpful function that you can use (and make variants of)
+
+clift1 :: ExpQ -> C t -> C a
+
+clift1 g (C x) = C $ do f <- g
+
+                        tx <- x
+
+                        return $ AppE f tx
+
+You will need
+
+{-# LANGUAGE TemplateHaskell #-}
+
+at the top of your file, as well as
+
+import Language.Haskell.TH
+
+import Text.PrettyPrint
+
+import GHC.Exts
+
+ 
+
+The final set of exercises, which together will make up the project, will involve partial evaluation.
+
+
+Links:
+https://hackage.haskell.org/package/prettyprinter
+https://hackage.haskell.org/package/prettyprinter-1.1.1/docs/Data-Text-Prettyprint-Doc.html
+http://language.haskell.th/
+https://github.com/JacquesCarette/finally-tagless
+http://okmij.org/ftp/tagless-final/JFP.pdf

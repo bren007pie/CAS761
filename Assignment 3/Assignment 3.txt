@@ -1,0 +1,20 @@
+I have done Part 3 myself (it includes Parts 1 and 2 still, even though just some parts are re-used). Attached is the skeleton that I used (and you’ll recognize some of the types from Sharon’s messages, and some of the tests from Jason).
+
+ 
+
+I have added more tests too. And, after each test, in a comment, I give the correct output that ‘ptest’ should print [up to renaming when there are lambdas].  I give you the instance for Fix2, as it is quite fiendish.
+
+ 
+
+Some of the tests are there to show how much program simplification is happening at compile time.
+
+    testgib is ‘gibonacci’, i.e. Fibonacci but with the initial conditions as parameters.  8 is indeed the 5th Fibonacci number.
+    you should compare the output of testpowfix7’ with the program testpowfix’.  This is the code for x^7.
+
+ 
+
+In other words, you will manage to write a pretty non-trivial optimizing compiler in < 300 lines of code, for a typed language with 18 constructors.
+
+ 
+
+If your types don’t quite match up with mine, but all the tests work, then that’s completely fine.
