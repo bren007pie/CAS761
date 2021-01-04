@@ -1,4 +1,3 @@
-“The sob story”
 I was working on (and very concerned about passing) a discrete math final assignment and the final exam.
 Alongside this, I was very behind (more mentally than in reality) on these assignments over the entire semester. 
 I learned and read a good bit about Haskell but never really implemented those learnings.
